@@ -9,8 +9,7 @@ import (
 	"strings"
 )
 
-/*
-   GetDelimiters assigns delimiter and separator values based on header.
+/* GetDelimiters assigns delimiter and separator values based on header.
 */
 func GetDelimiters(s string) (string, string) {
 
