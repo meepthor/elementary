@@ -5,16 +5,16 @@ const (
     Pipe = "|"
     // Tilde
     Tilde = "~"
-    //Quote
+    // Quote
     Quote = "\""
-    //Comma
+    // Comma
     Comma = ","
     //Carat
     Carat = "^"
-    //Concordance
+    // Concordance
     Ear = "\xfe"
-    //Paragraph
+    // Nose is Paragraph
     Nose = "\x14"
-    //UTF-16 Bom
+    // Bom UTF-16 
     Bom = "\xef\xbb\xbf"
 )

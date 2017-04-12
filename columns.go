@@ -5,7 +5,7 @@ import (
   "strings"
 )
 /*
-    Splits string in into []string using comma and quote as separator and delimiter.
+    Columns splits string in into []string using comma and quote as separator and delimiter.
 */
 func Columns(row, comma, quote string) []string {
 

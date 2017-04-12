@@ -10,7 +10,7 @@ import (
 )
 
 /*
-    Guess delimiter and separator values based on header.
+    GetDelimiters assigns delimiter and separator values based on header.
 */
 func GetDelimiters(s string) (string, string) {
 
@@ -64,7 +64,7 @@ func Zip(hs, cs []string) (map[string]string, bool) {
     
 }
 
-// Normalize header columns names
+// NormHeader normalizes header columns names
 func NormHeader(cs []string) []string {
     row := make([]string, len(cs))
     for i:= 0; i < len(cs); i++ {
@@ -76,7 +76,7 @@ func NormHeader(cs []string) []string {
     return row
 }
 
-// Generator for lines of text in a text file.
+// LineIterator returns a generator for lines of text in a text file.
 func LineIterator(fname string) <-chan string {
 
     ch := make(chan string)    
@@ -125,7 +125,7 @@ func LineIterator(fname string) <-chan string {
 }
 
 /*
-    Returns header and line iterator for provided textfile.
+    Lines returns header and line iterator for provided textfile.
 */
 func Lines(fname string) ([]string, <-chan map[string]string) {
     
