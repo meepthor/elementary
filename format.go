@@ -6,8 +6,7 @@ import (
 	"strings"
 )
 
-/* Format join []string to string using c and q as delimiter and separator.
-*/
+// Format join []string to string using c and q as delimiter and separator.
 func Format(c, q string) func([]string) string {
 	return func(row []string) string {
 		qcq := fmt.Sprintf("%s%s%s", q, c, q)
@@ -15,9 +14,8 @@ func Format(c, q string) func([]string) string {
 	}
 }
 
-/* FormatCSV join []string to string using c and q as delimiter and separator.
-   Adds quotes only if c or q is in column value.
-*/
+// FormatCSV join []string to string using c and q as delimiter and separator.
+// Adds quotes only if c or q is in column value.
 func FormatCSV(c, q string) func([]string) string {
 	return func(row []string) string {
 

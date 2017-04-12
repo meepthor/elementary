@@ -9,8 +9,7 @@ import (
 	"strings"
 )
 
-/* GetDelimiters assigns delimiter and separator values based on header.
-*/
+// GetDelimiters assigns delimiter and separator values based on header.
 func GetDelimiters(s string) (string, string) {
 
 	qcq := func(c, q string) string { return fmt.Sprintf("%s%s%s", q, c, q) }
@@ -123,9 +122,7 @@ func LineIterator(fname string) <-chan string {
 	return ch
 }
 
-/*
-   Lines returns header and line iterator for provided textfile.
-*/
+// Lines returns header and line iterator for provided textfile.
 func Lines(fname string) ([]string, <-chan map[string]string) {
 
 	lines := LineIterator(fname)
