@@ -30,7 +30,7 @@ func GetDelimiters(s string) (string, string) {
 		return Comma, Quote
 	} else if found("\t", "") {
 		return "\t", ""
-	} 
+	}
 
 	// Probably no delimiter
 	first := ""
@@ -38,7 +38,6 @@ func GetDelimiters(s string) (string, string) {
 		first = string(s[0])
 	}
 	return Pipe, first
-
 
 }
 
@@ -49,8 +48,8 @@ func Zip(hs, cs []string) (map[string]string, bool) {
 
 	if len(cs) != len(hs) {
 		return row, false
-	} 
-	
+	}
+
 	for i := 0; i < len(hs); i++ {
 		v := cs[i]
 		if len(v) > 0 {
