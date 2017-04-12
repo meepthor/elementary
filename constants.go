@@ -11,10 +11,10 @@ const (
 	Comma = ","
 	//Carat ^
 	Carat = "^"
-	// Concordance \xfe
+	// Ear Concordance \xfe
 	Ear = "\xfe"
 	// Nose is Paragraph
-	Nose = "\x14" 
+	Nose = "\x14"
 	// Bom UTF-16
 	Bom = "\xef\xbb\xbf"
 )

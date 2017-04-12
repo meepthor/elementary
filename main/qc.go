@@ -10,7 +10,7 @@ import (
 	"os"
 )
 
-// Write []byte to file with provided name.
+// WriteFile writes []byte to file with provided name.
 func WriteFile(fname string, contents []byte) {
 
 	f, err := os.Create(fname)

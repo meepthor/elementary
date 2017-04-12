@@ -61,7 +61,7 @@ var Tabbed = Format("\t", "")
 // Delimiters function serves as interface
 type Delimiters func([]string) string
 
-// []string to string using provided delimiters function
+// Line []string to string using provided delimiters function
 func Line(d Delimiters, row []string) string {
 	return fmt.Sprintf("%s\r\n", d(row))
 }
