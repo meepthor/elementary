@@ -1,20 +1,20 @@
 package qc
 
 const (
-	// Pipe
+	// Pipe |
 	Pipe = "|"
-	// Tilde
+	// Tilde ~
 	Tilde = "~"
-	// Quote
+	// Quote "
 	Quote = "\""
-	// Comma
+	// Comma ,
 	Comma = ","
-	//Carat
+	//Carat ^
 	Carat = "^"
-	// Concordance
+	// Concordance \xfe
 	Ear = "\xfe"
 	// Nose is Paragraph
-	Nose = "\x14"
+	Nose = "\x14" 
 	// Bom UTF-16
 	Bom = "\xef\xbb\xbf"
 )

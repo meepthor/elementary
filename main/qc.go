@@ -10,6 +10,7 @@ import (
 	"os"
 )
 
+// Write []byte to file with provided name.
 func WriteFile(fname string, contents []byte) {
 
 	f, err := os.Create(fname)
@@ -36,6 +37,7 @@ func contains(ss []string, t string) bool {
 	return false
 }
 
+// DatToJson converts csv to json
 func DatToJson(dat, dirname string) {
 
 	hdr, lines := qc.Lines(dat)
@@ -108,6 +110,7 @@ func pluckValues(dat string, format qc.Delimiters, columns ...string) {
 	}
 }
 
+// DatReport collects errors
 type DatReport struct {
 	Filename   string
 	Lines      int
