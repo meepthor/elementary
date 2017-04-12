@@ -1,7 +1,7 @@
 package qc
 
 import (
-	. "fmt"
+	"fmt"
 	"strings"
 )
 
@@ -9,7 +9,7 @@ import (
 func Columns(row, comma, quote string) []string {
 
 	undouble := func(s string) string {
-		doubled := Sprintf("%s%s", quote, quote)
+		doubled := fmt.Sprintf("%s%s", quote, quote)
 
 		replace := func(s string) string {
 			return strings.Replace(s, doubled, quote, -1)

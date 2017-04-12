@@ -30,15 +30,15 @@ func GetDelimiters(s string) (string, string) {
 		return Comma, Quote
 	} else if found("\t", "") {
 		return "\t", ""
-	} else {
+	} 
 
-		// Probably no delimiter
-		first := ""
-		if len(s) > 0 {
-			first = string(s[0])
-		}
-		return Pipe, first
+	// Probably no delimiter
+	first := ""
+	if len(s) > 0 {
+		first = string(s[0])
 	}
+	return Pipe, first
+
 
 }
 
@@ -49,12 +49,12 @@ func Zip(hs, cs []string) (map[string]string, bool) {
 
 	if len(cs) != len(hs) {
 		return row, false
-	} else {
-		for i := 0; i < len(hs); i++ {
-			v := cs[i]
-			if len(v) > 0 {
-				row[hs[i]] = v
-			}
+	} 
+	
+	for i := 0; i < len(hs); i++ {
+		v := cs[i]
+		if len(v) > 0 {
+			row[hs[i]] = v
 		}
 	}
 

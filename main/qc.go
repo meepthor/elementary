@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"encoding/json"
 	"flag"
-	. "fmt"
+	"fmt"
 	"log"
 	"meepthor/qc"
 	"os"
@@ -60,11 +60,11 @@ func DatToJson(dat, dirname string) {
 		var ok bool
 
 		if name, ok = line[key]; !ok {
-			name = Sprintf("%08d", counter)
+			name = fmt.Sprintf("%08d", counter)
 		}
 
 		if jstr, err := json.MarshalIndent(line, " ", " "); err == nil {
-			WriteFile(Sprintf("%s/%s.json", dirname, name), jstr)
+			WriteFile(fmt.Sprintf("%s/%s.json", dirname, name), jstr)
 		}
 		counter++
 	}
@@ -101,9 +101,9 @@ func pluckValues(dat string, format qc.Delimiters, columns ...string) {
 				qc.Write(format, buf)
 			} else {
 				if v, ok := line[check[0]]; ok {
-					Println(v)
+					fmt.Println(v)
 				} else {
-					Println("")
+					fmt.Println("")
 				}
 			}
 		}
@@ -167,7 +167,7 @@ func main() {
 		dat := flag.Args()[0]
 		hdr, _ := qc.Lines(dat)
 		for _, h := range hdr {
-			Println(h)
+			fmt.Println(h)
 		}
 
 	} else if flag.NArg() >= 2 {
