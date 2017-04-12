@@ -4,7 +4,9 @@ import (
   . "fmt"
   "strings"
 )
-
+/*
+    Splits string in into []string using comma and quote as separator and delimiter.
+*/
 func Columns(row, comma, quote string) []string {
 
     undouble := func (s string) string {        
