@@ -75,36 +75,6 @@ func NormHeader(cs []string) []string {
 }
 
 
-
-func OldLineIterator(fname string) <-chan string {
-
-    ch := make(chan string)    
-    file, err := os.Open(fname)
-    if err != nil {
-        log.Fatal(err)        
-    }
-    
-    reader := bufio.NewReader(file)
-    scanner := bufio.NewScanner(reader)    
-
-    go func() {
-
-        for scanner.Scan() {
-            ch <- scanner.Text()    
-        }  
-
-        if err := scanner.Err(); err != nil {
-            log.Fatal(err)                
-        }
-
-        close(ch) // Remember to close or the loop never ends!
-        defer file.Close()
-    }()
-
-    return ch
-}
-
-
 func LineIterator(fname string) <-chan string {
 
     ch := make(chan string)    
@@ -114,10 +84,6 @@ func LineIterator(fname string) <-chan string {
     }
     
     reader := bufio.NewReader(file)
-    
-    //func (b *Reader) ReadLine() (line []byte, isPrefix bool, err error)
-    
-       
 
     go func() {
 
